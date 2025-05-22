@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8"> <!-- Define o conjunto de caracteres da página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Responsividade -->
+
+    <!-- Importa o CSS do Bootstrap para estilização rápida e responsiva -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Importa o arquivo JavaScript com as funções de pesquisa e carregamento de nomes -->
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <title>Projeto lista nomes</title> <!-- Título da página exibido na aba do navegador -->
+  </head>
+
+  <body>
+    
+    <div class="container mt-5"> <!-- Container centralizado com margem superior -->
+        <div class="row">
+          <div class="col-md-12"> <!-- Coluna ocupando toda a largura em telas médias ou maiores -->
+              <h2>Usuários</h2> <!-- Título da seção -->
+
+              <div class="form-inline"> <!-- Formulário em linha para pesquisa e botões -->
+                <!-- Campo de texto para digitar o nome a ser pesquisado -->
+                <input class="form-control mr-2" type="text" placeholder="Pesquise um nome" id="pesquisa">
+
+                <!-- Botão para acionar a função de pesquisa -->
+                <input  class="btn btn-primary mr-2" 
+                type="submit" value="Pesquisar"
+                onclick = "pesquisarNome()" >
+                
+                <!-- Botão para carregar e exibir todos os nomes -->
+                <input  class="btn btn-warning" 
+                type="submit" value="carregar"
+                onclick="carregarNomes()">
+              </div>
+
+              <hr> <!-- Linha horizontal para separar o formulário da lista -->
+
+              <!-- Lista onde os nomes pesquisados ou carregados serão exibidos -->
+              <ul class="list-group" id="lista">
+                <li class="list-group-item">Nenhum nome...</li> <!-- Mensagem padrão inicial -->
+              </ul>
+
+          </div>
+        </div>
+      </div>
+
+  </body>
+
+</html>
